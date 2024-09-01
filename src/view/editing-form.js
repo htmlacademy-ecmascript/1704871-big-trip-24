@@ -1,7 +1,7 @@
-import { createEditPointTemplate } from "../templates/edit-point-template";
+import { createEditPointTemplate } from "../templates/edit-point-template.js";
 import { createElement } from "../render.js";
 
-export default class TimeFilter {
+export default class EditForm {
   getTemplate() {
     return createEditPointTemplate()
   }
