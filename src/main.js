@@ -1,12 +1,11 @@
-import MainPresenter from "./presenter/body-presenter.js";
+import BodyPresenter from './presenter/body-presenter.js';
+import HeaderPresenter from './presenter/header-presenter.js';
 
+const tripControls = document.querySelector('.trip-controls__filters');
+const tripEventsElement = document.querySelector('.trip-events');
 
-const siteHeaderElement = document.querySelector('.page-header');
-const siteTripControlsElement = siteHeaderElement.querySelector('.trip-controls__filters');
-const siteMainElement = document.querySelector('.page-main');
-const tripEventsElement = siteMainElement.querySelector('.trip-events');
+const bodyPresenter = new BodyPresenter({container: tripEventsElement});
+const headerPresenter = new HeaderPresenter({container: tripControls});
 
-const mainPresenter = new MainPresenter({container: tripEventsElement});
-
-mainPresenter.init();
-
+headerPresenter.init();
+bodyPresenter.init();

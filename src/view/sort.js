@@ -1,14 +1,14 @@
-import { createSortTemplate } from "../templates/sort-template.js";
-import { createElement } from "../render.js";
+import { createSortTemplate } from '../templates/sort.js';
+import { createElement } from '../render.js';
 
 export default class Sort {
   getTemplate() {
-    return createSortTemplate()
+    return createSortTemplate();
   }
 
   getElement() {
     if (!this.element) {
-      this.element = createElement(this.getTemplate())
+      this.element = createElement(this.getTemplate());
     }
     return this.element;
   }
