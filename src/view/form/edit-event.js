@@ -1,15 +1,17 @@
-import { createWaypointTemplate } from '../templates/waypoint.js';
-import { createElement } from '../render.js';
+import { createElement } from '../../render.js';
 
-export default class Waypoint {
+import { createEditEvent } from '../../templates/editing-event.js';
+
+class EditEventForm {
   getTemplate() {
-    return createWaypointTemplate();
+    return createEditEvent();
   }
 
   getElement() {
     if (!this.element) {
       this.element = createElement(this.getTemplate());
     }
+
     return this.element;
   }
 
@@ -17,3 +19,5 @@ export default class Waypoint {
     this.element = null;
   }
 }
+
+export default EditEventForm;
