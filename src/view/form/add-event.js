@@ -1,15 +1,17 @@
-import { createSortTemplate } from '../templates/sort.js';
-import { createElement } from '../render.js';
+import { createElement } from '../../render.js';
 
-export default class Sort {
+import { createAddEventForm } from './../../templates/uploading-event.js';
+
+class AddEventForm {
   getTemplate() {
-    return createSortTemplate();
+    return createAddEventForm();
   }
 
   getElement() {
     if (!this.element) {
       this.element = createElement(this.getTemplate());
     }
+
     return this.element;
   }
 
@@ -18,3 +20,4 @@ export default class Sort {
   }
 }
 
+export default AddEventForm;

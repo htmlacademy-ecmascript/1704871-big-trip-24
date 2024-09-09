@@ -1,15 +1,17 @@
-import { createEditPointTemplate } from '../templates/editing-point.js';
-import { createElement } from '../render.js';
+import { createElement } from '../../render.js';
 
-export default class EditForm {
+import { createSortTemplate } from '../../templates/sort.js';
+
+class Sort {
   getTemplate() {
-    return createEditPointTemplate();
+    return createSortTemplate();
   }
 
   getElement() {
     if (!this.element) {
       this.element = createElement(this.getTemplate());
     }
+
     return this.element;
   }
 
@@ -17,3 +19,6 @@ export default class EditForm {
     this.element = null;
   }
 }
+
+export default Sort;
+

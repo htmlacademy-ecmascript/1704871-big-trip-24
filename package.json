@@ -23,7 +23,14 @@
   "engines": {
     "node": "20"
   },
-  "browserslist": {
-
+  "browserslist":  [
+    "last 2 versions",
+    "ie <= 11",
+    "not dead",
+    "not op_mini all",
+    "not < 0.25%"
+  ],
+  "dependencies": {
+    "dayjs": "1.11.7"
   }
 }
